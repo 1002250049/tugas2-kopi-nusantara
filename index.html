@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kopi Nusantara — Katalog Biji Kopi Pilihan</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Komponen 1: Header & Navigasi Responsif -->
+  <header class="site-header" id="header">
+    <div class="container header-inner">
+      <a href="#" class="brand">Kopi<span>Nusantara</span></a>
+      
+      <button class="menu-toggle" id="menuToggle" aria-label="Buka menu navigasi">
+        ☰
+      </button>
+
+      <nav class="main-nav" id="mainNav">
+        <ul>
+          <li><a href="#katalog">Katalog</a></li>
+          <li><a href="#newsletter">Langganan</a></li>
+          <li><a href="#footer">Kontak</a></li>
+        </ul>
+      </nav>
+
+      <!-- Komponen 2: Penghitung Keranjang Interaktif -->
+      <button class="cart-btn" id="cartButton" aria-label="Lihat keranjang belanja">
+        🛒 Keranjang (<span id="cartCount">0</span>)
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Bagian Hero Singkat -->
+    <section class="hero">
+      <div class="container">
+        <h1>Seduh Kopi Terbaik dari Petani Lokal</h1>
+        <p>Dipanggang segar setiap minggu untuk menjaga cita rasa autentik Nusantara.</p>
+      </div>
+    </section>
+
+    <!-- Komponen 3: Katalog Kartu Produk & Filter -->
+    <section class="catalog-section container" id="katalog">
+      <div class="section-header">
+        <h2>Katalog Biji Kopi</h2>
+        <div class="filter-group" id="filterGroup">
+          <button class="filter-btn active" data-filter="semua">Semua</button>
+          <button class="filter-btn" data-filter="arabika">Arabika</button>
+          <button class="filter-btn" data-filter="robusta">Robusta</button>
+        </div>
+      </div>
+
+      <div class="product-grid" id="productGrid">
+        <article class="product-card" data-category="arabika">
+          <div class="product-badge">Arabika</div>
+          <h3>Aceh Gayo Wine</h3>
+          <p class="product-desc">Aroma buah fermentasi yang kuat dengan tingkat keasaman seimbang.</p>
+          <p class="product-price">Rp 95.000</p>
+          <button class="btn-primary add-to-cart" data-name="Aceh Gayo Wine">Tambah ke Keranjang</button>
+        </article>
+
+        <article class="product-card" data-category="arabika">
+          <div class="product-badge">Arabika</div>
+          <h3>Toraja Sapan</h3>
+          <p class="product-desc">Karakter rempah lembut dengan sentuhan cokelat hitam di akhir.</p>
+          <p class="product-price">Rp 90.000</p>
+          <button class="btn-primary add-to-cart" data-name="Toraja Sapan">Tambah ke Keranjang</button>
+        </article>
+
+        <article class="product-card" data-category="robusta">
+          <div class="product-badge">Robusta</div>
+          <h3>Lampung Fine Robusta</h3>
+          <p class="product-desc">Body tebal dan rasa kacang panggang yang cocok untuk kopi susu.</p>
+          <p class="product-price">Rp 65.000</p>
+          <button class="btn-primary add-to-cart" data-name="Lampung Fine Robusta">Tambah ke Keranjang</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- Komponen 4: Form Berlangganan dengan Validasi -->
+    <section class="newsletter-section" id="newsletter">
+      <div class="container">
+        <div class="newsletter-box">
+          <h2>Dapatkan Promo Panen Baru</h2>
+          <p>Masukkan email Anda untuk mendapatkan diskon 15% pada pesanan pertama.</p>
+          <form id="newsletterForm" novalidate>
+            <div class="form-group">
+              <label for="emailInput" class="visually-hidden">Alamat Email</label>
+              <input type="email" id="emailInput" placeholder="nama@email.com" required>
+              <button type="submit" class="btn-primary">Daftar</button>
+            </div>
+            <p class="form-feedback" id="formFeedback" role="alert"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Komponen 5: Footer Semantik -->
+  <footer class="site-footer" id="footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Kopi Nusantara. Dibuat untuk Tugas 2 Pemrograman Web.</p>
+      <p>Jl. Melati No. 45, Bandung | Buka: 08.00 – 21.00 WIB</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
